@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 let posts = [];
 app.get('/', function(req, res){
-    res.render('home', {mainContent: homeStartingContent, posts: posts});
+    res.render('home', {mainContent: homeStartingContent, posts: posts, _: _});
 });
 app.get('/about', function(req, res){
     res.render('about',{ mainContent: aboutContent});

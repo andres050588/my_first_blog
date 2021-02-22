@@ -3,6 +3,8 @@
 <p><%= mainContent %></p>
 <% posts.forEach(function(newPost){ %>
     <h1> <%= newPost.newPostTitle %> </h1>
-    <p> <%= newPost.newPostBody %> </p>
+    <p> <%= newPost.newPostBody.substring(0, 100) + '...'%>
+        <a href= <%= 'posts/' + _.kebabCase(newPost.newPostTitle) %>>Read more</a>
+    </p>
 <% }) %>
 <%- include('partials/footer') -%>
